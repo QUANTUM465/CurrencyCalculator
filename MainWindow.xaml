@@ -1,0 +1,26 @@
+﻿<Window x:Class="CurrencyCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CurrencyCalculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+        <ListBox x:Name="List_Box1" d:ItemsSource="{d:SampleData ItemCount=0}" Height="NaN" Margin="32,57,525,105" Width="NaN" PreviewMouseDoubleClick="List_Box1_PreviewMouseDoubleClick"/>
+        <Label x:Name="CurrencyLabel_FirstCurrency" Content="" HorizontalAlignment="Left" Height="29" Margin="536,91,0,0" VerticalAlignment="Top" Width="164" Background="#FFFCFCFC"/>
+        <ListBox x:Name="List_Box2" d:ItemsSource="{d:SampleData ItemCount=0}" Height="NaN" Margin="293,57,269,105" Width="NaN" PreviewMouseDoubleClick="List_Box2_PreviewMouseDoubleClick"/>
+        <Label Content="Виберіть першу валюту " HorizontalAlignment="Left" Height="30" Margin="66,22,0,0" VerticalAlignment="Top" Width="158"/>
+        <Label Content="Виберіть другу валюту " HorizontalAlignment="Left" Height="30" Margin="278,22,0,0" VerticalAlignment="Top" Width="158"/>
+        <Label Content="Курс валюти один відносно валюти два:" HorizontalAlignment="Left" Height="29" Margin="536,22,0,0" VerticalAlignment="Top" Width="233"/>
+        <Label Content="Вибрана валюта: " HorizontalAlignment="Left" Height="29" Margin="536,57,0,0" VerticalAlignment="Top" Width="164"/>
+        <Label Content="Вибрана валюта: " HorizontalAlignment="Left" Height="29" Margin="536,125,0,0" VerticalAlignment="Top" Width="164"/>
+        <Label x:Name="CurrencyLabel_SecondCurrency" Content="" HorizontalAlignment="Left" Height="29" Margin="536,154,0,0" VerticalAlignment="Top" Width="164" Background="#FFFCFCFC"/>
+        <Button x:Name="CalculateButton" Content="Обрахувати" HorizontalAlignment="Left" Height="52" Margin="85,348,0,0" VerticalAlignment="Top" Width="137" Click="CalculateButton_Click"/>
+        <Button x:Name="ClearButton" Content="Очистити" HorizontalAlignment="Left" Height="53" Margin="293,348,0,0" VerticalAlignment="Top" Width="210" Click="Button_Click"/>
+        <Label Content="Результат:" HorizontalAlignment="Left" Height="29" Margin="536,188,0,0" VerticalAlignment="Top" Width="164"/>
+        <Label x:Name="CurrencyLabel_Result" Content="" HorizontalAlignment="Left" Height="29" Margin="536,222,0,0" VerticalAlignment="Top" Width="164" Foreground="Black" Background="#FFFCFCFC"/>
+
+    </Grid>
+</Window>
+    
