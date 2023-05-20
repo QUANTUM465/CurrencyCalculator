@@ -1,0 +1,24 @@
+﻿<Window x:Class="CurrencyCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CurrencyCalculator"
+        mc:Ignorable="d"
+        Title="Currency calculator" Height="450" Width="800">
+    <Grid Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Select first currency" HorizontalAlignment="Left" Height="30" Margin="66,22,0,0" VerticalAlignment="Top" Width="158"/>
+        <Label Content="Select second currency " HorizontalAlignment="Left" Height="30" Margin="303,22,0,0" VerticalAlignment="Top" Width="158"/>
+        <ComboBox x:Name="ComboBox_First_Currency" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="214" SelectionChanged="ComboBox_First_Currency_SelectionChanged" Height="22" IsTextSearchEnabled="True" IsEditable="True"  />
+        <ComboBox x:Name="ComboBox_Second_Currency" HorizontalAlignment="Left" Margin="303,75,0,0" VerticalAlignment="Top" Width="214" SelectionChanged="ComboBox_Second_Currency_SelectionChanged" IsEditable="True"/>
+        <TextBox x:Name="TextBox_I_Have" HorizontalAlignment="Left" Height="19" Margin="12,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" TextChanged="TextBox_I_Have_TextChanged"/>
+        <TextBox x:Name="TextBox_I_Get" HorizontalAlignment="Left" Height="19" Margin="303,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" IsReadOnly="True"/>
+        <Label Content="Time to update:" HorizontalAlignment="Left" Height="29" Margin="553,79,0,0" VerticalAlignment="Top" Width="195"/>
+        <Label x:Name="Label_Time" Content="" HorizontalAlignment="Left" Height="35" Margin="553,121,0,0" VerticalAlignment="Top" Width="195" Background="White" IsEnabled="False" Foreground="Black"/>
+    </Grid>
+
+</Window>
+
