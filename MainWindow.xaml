@@ -19,6 +19,5 @@
         <Label Content="Time to update:" HorizontalAlignment="Left" Height="29" Margin="553,79,0,0" VerticalAlignment="Top" Width="195"/>
         <Label x:Name="Label_Time" Content="" HorizontalAlignment="Left" Height="35" Margin="553,121,0,0" VerticalAlignment="Top" Width="195" Background="White" IsEnabled="False" Foreground="Black"/>
     </Grid>
-
 </Window>
-
+    
