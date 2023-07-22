@@ -5,6 +5,8 @@ using System.Net.Http;
 using System.Windows;
 using Newtonsoft.Json;
 using PostDataResponce;
+using System.IO;
+
 
 namespace ConsoleСurrencyCalculator
 {
@@ -165,6 +167,7 @@ namespace ConsoleСurrencyCalculator
         /// </returns>
         public static float FindCurrency(int codeA, int codeB)
         {
+            Currency currency = null;
             try
             {
                 foreach (Currency item in currencies)
@@ -175,17 +178,17 @@ namespace ConsoleСurrencyCalculator
                     }
                     else
                     {
-                        if (item.CurrencyCodeA == codeA && item.CurrencyCodeB == codeB)
-                        {
+                    if (item.CurrencyCodeA == codeA && item.CurrencyCodeB == codeB)
+                    {
                             return item.RateCross;
-                        }
-                        else
-                        {
+                    }
+                    else
+                    {
                             foreach (Currency element in currencies)
-                            {
+                        {
                                 if (item.CurrencyCodeA == codeA && element.CurrencyCodeB == 980)
                                 {
-                                    float temporaryRateCross = item.RateCross;
+                            float temporaryRateCross = item.RateCross;
                                     if (element.CurrencyCodeA == codeB && element.CurrencyCodeB == 980)
                                     {
                                         float result = temporaryRateCross / element.RateCross;
@@ -203,6 +206,7 @@ namespace ConsoleСurrencyCalculator
                 MessageBox.Show("Something went wrong!");
                 throw;
             }
+            //HACK:: For this method null is default value to return
         }
 
         //UNDONE:: Server throw exception if requestі is too often

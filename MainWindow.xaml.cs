@@ -1,8 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using PostDataResponce;
 using ConsoleСurrencyCalculator;
 using System.Text.RegularExpressions;
 using System.Windows.Threading;
@@ -38,7 +48,7 @@ namespace CurrencyCalculator
             timer.Tick += Timer_Tick;
             timer.Start();
         }
-
+        
         private void Timer_Tick(object sender, EventArgs e)
         {
             Label_Time.Content = DateTime.Now.ToLongTimeString();
@@ -60,7 +70,7 @@ namespace CurrencyCalculator
                     TextBox_I_Get.Text = (I_Have * currency).ToString();
                 }
                 else
-                {
+        {
                     MessageBox.Show("Seems like input data are wrong.Try again");
                     return;
                 }
